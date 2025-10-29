@@ -9,7 +9,6 @@ services:
   - type: cron
     name: nitter-auto-collector
     env: python
-    plan: free
     buildCommand: "pip install -r requirements.txt"
-    schedule: "0 6 * * *"  # executa todos os dias às 6h UTC (ajuste se quiser 6h Brasil)
     startCommand: "python analise_tarifaco_nitter_auto.py"
+    schedule: "0 6 * * *"  # executa todos os dias às 6h da manhã (UTC)
